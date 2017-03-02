@@ -1,0 +1,11 @@
+
+/* NAV BAR CSS */
+.navigation {
+  padding:10px;
+}
+
+.brand-text {
+  font-size: 44px;
+  font-family: 'Play', sans-serif;
+  color: #fff;
+}

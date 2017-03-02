@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html ng-app="bloc-chat">
+<html ng-app="blocChat">
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Bloc Chat Project</title>
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8">
+  <title>Bloc Chat Project</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-  <ui-view></ui-view>
 
+    <!-- branding and navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container navigation">
+          <a class="navbar-brand brand-text" href="/">BLOC CHAT</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Create New Room</a></li>
+            <li><a href="#">Set User Name</a></li>
+            <li><a href="#">List Chat Rooms</a></li>
+          </ul>
+        </div>
+    </nav>
+  <!-- body -->
+  <div class="container">
+    <!-- chat room nav -->
+    <!-- chat room window-->
+
+    <ui-view></ui-view>
+
+    <!-- footer -->
+    
+    
+  </div>
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <!-- UI Router -->
@@ -31,6 +55,11 @@
 
   <!-- include the engine for the angular app -->
   <script src="/scripts/app.js"></script>
+  <!-- Services and Factory -->
+  <script src="/scripts/factory/Room.js"></script>
+  <!-- Controllers-->
+  <script src="/scripts/controller/RoomCtrl.js"></script>
+
 
 </body>
 </html>

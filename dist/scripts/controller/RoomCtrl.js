@@ -1,9 +1,10 @@
 (function() {
-  function RoomCtrl(Room) {
-    alert("this is working");
+  function RoomCtrl($scope,Room) {
+    /* Get all rooms in database */
+    $scope.roomList = Room.all; 
   }
 
  angular
     .module('blocChat')
-    .controller('RoomCtrl', ['Room', RoomCtrl]);
+    .controller('RoomCtrl', ['$scope','Room',RoomCtrl]);
 })();

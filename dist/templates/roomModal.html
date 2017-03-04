@@ -1,0 +1,13 @@
+<div>
+  <form>
+    <div class="modal-body">
+          <h3>Add a new room?</h3>
+          <p>Please enter your new room name.</p>
+          <input type="text" ng-model="roomName" name="roomName">     
+    </div>
+    <div class="modal-footer">
+      <button class="button default btn-default" ng-click="$modalCtrl.cancel()">Cancel</button>
+      <button class="button primary btn-primary" ng-click="$modalCtrl.ok(roomName)">Submit</button>
+    </div>
+ </form>  
+</div>

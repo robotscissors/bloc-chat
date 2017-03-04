@@ -15,7 +15,7 @@
       <div class="container navigation">
           <a class="navbar-brand brand-text" href="/">BLOC CHAT</a>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Create New Room</a></li>
+            <li ng-controller="ModalCtrl as modal"><a href="#" ng-click="modal.open()">Create New Room</a></li>
             <li><a href="#">Set User Name</a></li>
             <li><a href="#">List Chat Rooms</a></li>
           </ul>
@@ -23,7 +23,6 @@
     </nav>
   <!-- body -->
   <div class="container">
-    <!-- chat room nav -->
     <!-- chat room window-->
 
     <ui-view></ui-view>
@@ -38,6 +37,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <!-- UI Bootstrap -->
+  <script src="/scripts/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
 
   <!-- firebase-->
   <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
@@ -58,8 +59,9 @@
   <!-- Services and Factory -->
   <script src="/scripts/service/Room.js"></script>
   <!-- Controllers-->
-  <script src="/scripts/controller/RoomCtrl.js"></script>
-
+  <script src="/scripts/controller/MainCtrl.js"></script>
+  <script src="/scripts/controller/ModalCtrl.js"></script>
+  <script src="/scripts/controller/ModalInstanceCtrl.js"></script>
 
 </body>
 </html>

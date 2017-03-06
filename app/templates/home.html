@@ -1,4 +1,10 @@
 <!-- set up chat room column-->
-<section class="col-md-3">
-  <ng-include src="'/templates/roomListing.html'"></ng-include>
-</section>
+<div ng-controller="HomeCtrl as home">
+    <section class="col-md-3">
+      <ng-include src="'/templates/roomListing.html'"></ng-include>
+    </section>
+    <!-- set up chat room -->
+    <section class="col-md-9">
+      <ng-include src="'/templates/chatMessages.html'"></ng-include>
+    </section>
+</div>

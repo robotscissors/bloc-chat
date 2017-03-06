@@ -9,3 +9,35 @@
   font-family: 'Play', sans-serif;
   color: #fff;
 }
+
+/* CHAT ROOM STYLE */
+.chatRoom {
+  height:500px;
+}
+.chatRoom .roomName {
+  color: black;
+  padding-bottom:15px;
+}
+
+
+.chatRoom .messageContainer{
+  width:100%;
+  margin: 5px 5px 5px 5px;
+}
+
+.chatRoom .messageContent{
+  width:70%;
+  float:left;
+}
+
+.chatRoom .messageSentAt{
+  font-size: 10px;
+  padding-left:5px;
+  width: 30%;
+  float:left;
+}
+
+/* ROOM LISTING STYLE */
+.roomList {
+  height:500px;
+}

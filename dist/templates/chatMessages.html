@@ -1,0 +1,11 @@
+<section class="well chatRoom">
+   <div>
+    <h4 class="text-uppercase roomName">{{currentRoom}} Messages</h4>
+  </div>
+  <div class="messageContainer">
+    <div ng-repeat="content in roomMessages track by $index">
+        <div class="messageContent">{{roomMessages[$index].content}}</div>
+        <div class="messageSentAt">{{roomMessages[$index].sentAt}}<br />{{roomMessages[$index].username}}</div>
+    </div>
+  </div>
+</section>

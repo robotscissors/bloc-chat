@@ -6,7 +6,12 @@
       getByRoomId: function(roomId){
                     var filteredMessages = ref.orderByChild("roomId").equalTo(roomId);
                     return ($firebaseArray(filteredMessages));
-                  }
+                  },
+
+      send: function(newMessage,chatUser,currentRoomId){
+        alert('Your new message is: '+newMessage + chatUser + currentRoomId);
+
+            }
     };
    }
   angular

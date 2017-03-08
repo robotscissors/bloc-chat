@@ -4,6 +4,8 @@
     // this is the controller to controll all functions of the room (get rooms, add rooms, etc.)
     // but I am unable to access these functions beyond this controller
 
+    var errorFlag = false;
+
     /* Get all rooms in database */
     $scope.roomList = Room.all;
 
@@ -23,8 +25,23 @@
       $scope.currentRoomId = roomId;
       $scope.roomMessages = Message.getByRoomId($scope.currentRoomId);
     }
-  }
 
+    this.submitMessage = function(newMessage){
+      //check to make sure there is a room for people to chat in
+      if (!$scope.currentRoom) {
+        alert('You need to select a room to chat in!');
+        errorFlag = true;
+      }
+
+      if ((newMessage !== undefined)) {
+        Message.send(newMessage,$scope.currentChatUser,$scope.currentRoomId);
+      }
+
+
+
+    }
+
+  }
 
 
 

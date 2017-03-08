@@ -37,6 +37,10 @@
   float:left;
 }
 
+.homePage .username {
+  padding:0px 15px 10px 0px;
+}
+
 /* ROOM LISTING STYLE */
 .roomList {
   height:500px;

@@ -16,6 +16,7 @@
           <a class="navbar-brand brand-text" href="/">BLOC CHAT</a>
           <ul class="nav navbar-nav navbar-right">
             <li ng-controller="ModalCtrl as modal"><a href="#" ng-click="modal.open()">Create New Room</a></li>
+            <!--<li ng-controller="ModalUserCtrl as userModal"><a href="#" ng-click="userModal.open()" >Set User Name</a></li>-->
             <li><a href="#">Set User Name</a></li>
             <li><a href="#">List Chat Rooms</a></li>
           </ul>
@@ -28,18 +29,19 @@
     <ui-view></ui-view>
 
     <!-- footer -->
-    
-    
+
+
   </div>
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- include angular cookies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
   <!-- UI Router -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-    <!-- UI Bootstrap -->
+  <!-- UI Bootstrap -->
   <script src="/scripts/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
-
   <!-- firebase-->
   <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
   <script>
@@ -59,10 +61,14 @@
   <!-- Services and Factory -->
   <script src="/scripts/service/Room.js"></script>
   <script src="/scripts/service/Message.js"></script>
+  <script src="/scripts/service/User.js"></script>
   <!-- Controllers-->
   <script src="/scripts/controller/HomeCtrl.js"></script>
   <script src="/scripts/controller/ModalCtrl.js"></script>
+  <!--<script src="/scripts/controller/ModalUserCtrl.js"></script>-->
   <script src="/scripts/controller/ModalInstanceCtrl.js"></script>
+
+
 
 </body>
 </html>

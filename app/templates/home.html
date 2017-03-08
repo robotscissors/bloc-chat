@@ -1,11 +1,12 @@
 <!-- set up chat room column-->
 <div class="homePage">
-  <div class="col-md-12 text-right username" ng-show="currentChatUser">USERNAME: {{currentChatUser}}</div>
+  <div class="col-md-12 text-right username" ng-model="currentChatUser" ng-show="currentChatUser">USERNAME: {{currentChatUser}}</div>
   <section class="col-md-3">
     <ng-include src="'/templates/roomListing.html'"></ng-include>
   </section>
   <!-- set up chat room -->
   <section class="col-md-9">
     <ng-include src="'/templates/chatMessages.html'"></ng-include>
+    <ng-include src="'/templates/sendMessage.html'"></ng-include>
   </section>
 </div>

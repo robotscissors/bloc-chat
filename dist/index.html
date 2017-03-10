@@ -16,9 +16,6 @@
           <a class="navbar-brand brand-text" href="/">BLOC CHAT</a>
           <ul class="nav navbar-nav navbar-right">
             <li ng-controller="ModalCtrl as modal"><a href="#" ng-click="modal.open()">Create New Room</a></li>
-            <!--<li ng-controller="ModalUserCtrl as userModal"><a href="#" ng-click="userModal.open()" >Set User Name</a></li>-->
-            <li><a href="#">Set User Name</a></li>
-            <li><a href="#">List Chat Rooms</a></li>
           </ul>
         </div>
     </nav>
@@ -61,11 +58,10 @@
   <!-- Services and Factory -->
   <script src="/scripts/service/Room.js"></script>
   <script src="/scripts/service/Message.js"></script>
-  <script src="/scripts/service/User.js"></script>
   <!-- Controllers-->
   <script src="/scripts/controller/HomeCtrl.js"></script>
   <script src="/scripts/controller/ModalCtrl.js"></script>
-  <!--<script src="/scripts/controller/ModalUserCtrl.js"></script>-->
+  <script src="/scripts/controller/ModalUserInstanceCtrl.js"></script>
   <script src="/scripts/controller/ModalInstanceCtrl.js"></script>
 
 

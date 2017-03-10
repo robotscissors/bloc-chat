@@ -1,5 +1,5 @@
-<section ng-controller="RoomCtrl as rooms" class="well">
+<section class="well roomList">
    <div ng-repeat="roomName in roomList">
-    <h4>{{roomName.$value}}</h4>
+     <h4><a href class="text-uppercase" ng-click="selectRow(roomName.$value,roomName.$id)">{{roomName.$value}}</a></h4>
   </div>
 </section>

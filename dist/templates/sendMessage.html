@@ -1,7 +1,7 @@
 <section class="sendMessages">
-  <form class="form-group row">
-    <input type="text" ng-model="messageToSend" name="messageToSend" class="form-control inputStyle" placeholder="Type your message here ..." autofocus>
-    <input ng-click="home.submitMessage(messageToSend)" class="btn btn-default buttonStyle" type="submit" value="Send">
+  <form name="home.messageForm" class="form-group row">
+    <input ng-model="home.messageToSend.message" name="messageToSend" class="form-control inputStyle" placeholder="Type your message here ..." autofocus>
+    <input ng-click="home.submitMessage(home.messageToSend)" class="btn btn-default buttonStyle" type="submit" value="Send">
   </form>
 </section>
 

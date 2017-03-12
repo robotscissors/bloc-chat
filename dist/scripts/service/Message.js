@@ -25,10 +25,11 @@
                   sentAt: messageStamp
                 });
 
-            }     
-        }
+              }     
+            }
+      }
     }
-   }
+    
   }
   angular
     .module('blocChat')

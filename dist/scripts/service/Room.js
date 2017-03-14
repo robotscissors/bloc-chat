@@ -8,7 +8,6 @@
       addRoom: function(roomName){
         rooms.$add(roomName);
       }
-      
     };
   }
 

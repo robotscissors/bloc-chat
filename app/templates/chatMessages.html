@@ -3,15 +3,9 @@
     <h4 class="text-uppercase roomName">{{currentRoom}} Messages</h4>
   </div>
   <div class="messageContainer">
-    <table class="table table-striped">
-    <tr ng-repeat="content in roomMessages track by $index">
-      <td>
-        <div class="messageContent">
-          <span class="messageUser">{{roomMessages[$index].username}}</span><br />
-          <span>{{roomMessages[$index].content}}</span>
-        </div>
-        <div class="messageSentAt text-center">{{roomMessages[$index].sentAt}}</div>
-      </td>
-    </table>
- </div>
+    <div ng-repeat="content in roomMessages track by $index">
+        <div class="messageContent">{{roomMessages[$index].content}}</div>
+        <div class="messageSentAt">{{roomMessages[$index].sentAt}}<br />{{roomMessages[$index].username}}</div>
+    </div>
+  </div>
 </section>

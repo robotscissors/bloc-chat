@@ -15,7 +15,9 @@
       <div class="container navigation">
           <a class="navbar-brand brand-text" href="/">BLOC CHAT</a>
           <ul class="nav navbar-nav navbar-right">
-            <li ng-controller="ModalCtrl as modal"><a href="#" ng-click="modal.open()">Create New Room</a></li>
+            <li ng-controller="ModalCtrl as modal"><a href="#" ng-click="modal.open()">Create New 
+            <li><a href="#">Set User Name</a></li>
+            <li><a href="#">List Chat Rooms</a></li>
           </ul>
         </div>
     </nav>
@@ -53,9 +55,6 @@
     firebase.initializeApp(config);
   </script>
 
-  <!-- include utilities -->
-  <script src="/scripts/utilities/GlobalUtilities.js"></script>
-  
   <!-- include the engine for the angular app -->
   <script src="/scripts/app.js"></script>
   <!-- Services and Factory -->

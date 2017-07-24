@@ -3,16 +3,16 @@
 
     // this is the controller to controll all functions of the room (get rooms, add rooms, etc.)
     // but I am unable to access these functions beyond this controller
-    
+
     /* Get all rooms in database */
     //Needs to be a $scope variable since we need it for ng-repeat in view
-    $scope.roomList = Room.all; 
-    
+    $scope.roomList = Room.all;
+
     $scope.roomList.$loaded().then(function() {
 
-      //scope varialbe for roomID, Messages and roomname - all used in view  
-      $scope.currentRoomId = $scope.roomList[0].$id; 
-      $scope.currentRoom = $scope.roomList[0].$value; 
+      //scope varialbe for roomID, Messages and roomname - all used in view
+      $scope.currentRoomId = $scope.roomList[0].$id;
+      $scope.currentRoom = $scope.roomList[0].$value;
       $scope.roomMessages = Message.getByRoomId($scope.currentRoomId);
     })
 
@@ -27,15 +27,16 @@
     }
 
     this.submitMessage = function(newMessage){
-      Message.send(newMessage.message,$scope.currentRoomId,$scope.currentChatUser); 
+      console.log (newMessage.message +':'+ $scope.currentRoomId +':'+ $scope.currentChatUser);
+      Message.send(newMessage.message,$scope.currentRoomId,$scope.currentChatUser);
       this.messageToSend={};
     }
-    
+
   }
 
 
 
- 
+
  angular
     .module('blocChat')
     .controller('HomeCtrl', ['$scope','Room','Message','$cookies',HomeCtrl])

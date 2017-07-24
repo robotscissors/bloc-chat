@@ -9,8 +9,7 @@
     $scope.roomList = Room.all;
 
     $scope.roomList.$loaded().then(function() {
-
-      //scope varialbe for roomID, Messages and roomname - all used in view
+      //scope variable for roomID, Messages and roomname - all used in view
       $scope.currentRoomId = $scope.roomList[0].$id;
       $scope.currentRoom = $scope.roomList[0].$value;
       $scope.roomMessages = Message.getByRoomId($scope.currentRoomId);
@@ -27,6 +26,8 @@
     }
 
     this.submitMessage = function(newMessage){
+      $scope.currentChatUser = $cookies.get('blocChatCurrentUser');
+      console.log ('this is the first room ID: '+ $scope.currentChatUser);
       console.log (newMessage.message +':'+ $scope.currentRoomId +':'+ $scope.currentChatUser);
       Message.send(newMessage.message,$scope.currentRoomId,$scope.currentChatUser);
       this.messageToSend={};

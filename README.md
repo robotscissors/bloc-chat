@@ -10,6 +10,8 @@ Start by cloning the repository:
 $ git clone https://github.com/Bloc/bloc-frontend-project-starter.git <your-frontend-project-name>
 ```
 
+![screen shot 2018-06-21 at 9 54 12 pm](https://user-images.githubusercontent.com/24664863/41758482-b19b7d1a-759d-11e8-8ffa-c6b01cbc40f3.png)
+
 The project uses Grunt to run tasks in development. Thoroughly review our [resource on using Grunt](https://www.bloc.io/resources/using-grunt) before using this application. It may also help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
 
 Install the project dependencies by running:

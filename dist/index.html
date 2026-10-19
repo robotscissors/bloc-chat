@@ -41,16 +41,11 @@
   <script src="/scripts/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
   <!-- firebase-->
   <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+  <!-- gitignored; copy firebase-config.example.js to create it -->
+  <script src="/scripts/firebase-config.js"></script>
   <script>
     // Initialize Firebase
-    var config = {
-      apiKey: "***REMOVED***",
-      authDomain: "robotscissors-chat.firebaseapp.com",
-      databaseURL: "https://robotscissors-chat.firebaseio.com",
-      storageBucket: "robotscissors-chat.appspot.com",
-      messagingSenderId: "706723408616"
-    };
-    firebase.initializeApp(config);
+    firebase.initializeApp(window.FIREBASE_CONFIG);
   </script>
 
   <!-- include utilities -->

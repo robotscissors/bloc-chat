@@ -3,3 +3,8 @@ bower_components/
 .idea/
 .sass-cache/
 .DS_Store
+.claude/
+
+# Firebase config holds the API key — keep it out of git
+app/scripts/firebase-config.js
+dist/scripts/firebase-config.js
